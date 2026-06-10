@@ -536,6 +536,132 @@ main {
   margin-bottom: 18px;
 }
 
+.dataStory {
+  margin: 34px 0 18px;
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.storyChart {
+  display: flex;
+  flex-direction: column;
+  min-height: 520px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--warm-white);
+  box-shadow: 0 12px 36px rgba(43, 47, 54, 0.08);
+}
+
+.storyChartHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.storyChartHeader h3 {
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.25;
+}
+
+.storyChartHeader p {
+  margin: 8px 0 0;
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+
+.storyChartHeader > span {
+  flex: none;
+  max-width: 126px;
+  border-radius: 999px;
+  padding: 7px 9px;
+  color: var(--burgundy);
+  background: rgba(122, 46, 58, 0.1);
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-align: right;
+}
+
+.storyBars {
+  display: grid;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.storyBarRow {
+  display: grid;
+  gap: 8px;
+}
+
+.storyBarLabel {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.storyBarLabel span {
+  color: var(--charcoal);
+  font-weight: 750;
+}
+
+.storyBarLabel strong {
+  color: var(--burgundy);
+  white-space: nowrap;
+}
+
+.storyBarTrack {
+  height: 16px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--cream);
+}
+
+.storyBarTrack span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--burgundy), var(--mauve));
+}
+
+.storyBarRow a {
+  color: var(--ink-soft);
+  font-size: 0.76rem;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+.storyBarRow a:hover {
+  color: var(--burgundy);
+  text-decoration: underline;
+}
+
+.storyDecision {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.storyDecision strong {
+  color: var(--burgundy);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+}
+
+.storyDecision p {
+  margin: 8px 0 0;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
 .reportGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1088,6 +1214,7 @@ footer {
   .timelineGrid,
   .scorecardGrid,
   .sourceGrid,
+  .storyGrid,
   .reportGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1158,6 +1285,7 @@ footer {
   .briefGrid,
   .sourceGrid,
   .outlookGrid,
+  .storyGrid,
   .reportGrid,
   .dataFilterGrid {
     grid-template-columns: 1fr;

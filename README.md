@@ -24,17 +24,18 @@ The app is Vercel-ready with `vercel.json` configured for Vite.
 - Public signal methodology
 - One-year signal timeline
 - Backtested signal cards
-- Directional validation scorecard
+- Source-backed evidence scorecard
 - Category and audience filters
 - Local executive brief generator
-- Interactive proof-of-concept evidence database
+- Interactive source-backed evidence database
 - Filterable reporting lab with CSV export
+- Real-data story graphs tied to sourced evidence records
 - Source monitoring framework
 - Current outlook for AI infrastructure and energy-constrained operations
 
 ## Data Lab
 
-The Data Lab page uses a local source-backed evidence ledger to show how public observations can be turned into structured signal intelligence. It includes filters for category, quarter, source type, and search terms, plus summary reports and CSV export.
+The Data Lab page uses a local source-backed evidence ledger to show how public observations can be turned into structured signal intelligence. It includes filters for category, quarter, source type, and search terms, real-data story graphs, summary reports, and CSV export.
 
 The public JSON dataset is available at:
 
@@ -42,6 +43,8 @@ The public JSON dataset is available at:
 /data/evidence-records.json
 ```
 
-Each signal card includes a decision-flow chart showing the linked evidence inputs, strongest measured signal, testable expectation, validation readout, and recommended business action.
+Each signal card includes a decision-flow chart showing the linked evidence inputs, measured signal, testable expectation, validation readout, and recommended business action.
+
+The data-story graphs use only numeric values from sourced records. Non-numeric monitoring records are excluded from charting until exact values are extracted from source data.
 
 The included records are working evidence records with source URLs, retrieval dates, metric values, units, and decision notes. Before public release, each record should receive a final analyst review against the source document and, where possible, an archived source snapshot.

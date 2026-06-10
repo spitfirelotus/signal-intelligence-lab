@@ -18,7 +18,6 @@
     "observation": "Data centers accounted for about 4.4% of total U.S. electricity consumption in 2023.",
     "businessQuestion": "Is data-center electricity demand large enough to affect power availability and planning?",
     "indicator": "Data-center share of national electricity consumption",
-    "strength": 94,
     "confidence": "High",
     "validationStatus": "Confirmed",
     "reportNote": "Power availability should be treated as a strategic site-selection and operating constraint, not a late-stage procurement task."
@@ -42,7 +41,6 @@
     "observation": "The LBNL/DOE report projects data centers could represent 6.7% to 12.0% of total U.S. electricity consumption by 2028.",
     "businessQuestion": "How large could the power constraint become within one planning cycle?",
     "indicator": "Projected data-center electricity share",
-    "strength": 96,
     "confidence": "High",
     "validationStatus": "Confirmed",
     "reportNote": "Scenario planning should include low, mid, and high power-availability cases rather than one base-case load assumption."
@@ -66,7 +64,6 @@
     "observation": "NERC reported aggregated assessment-area summer peak demand growth of 132 GW, or about 15%, over the 10-year assessment period.",
     "businessQuestion": "Will load growth intensify interconnection and grid-readiness constraints?",
     "indicator": "Summer peak demand growth",
-    "strength": 91,
     "confidence": "High",
     "validationStatus": "Confirmed",
     "reportNote": "Expansion plans should include interconnection timing and grid-upgrade exposure as gating criteria."
@@ -90,7 +87,6 @@
     "observation": "NERC reported aggregated assessment-area winter peak demand growth of 149 GW, or almost 18%, over the 10-year assessment period.",
     "businessQuestion": "Could winter reliability become a more important operating constraint?",
     "indicator": "Winter peak demand growth",
-    "strength": 90,
     "confidence": "High",
     "validationStatus": "Confirmed",
     "reportNote": "Site and power strategies should test both summer and winter peak exposure."
@@ -114,7 +110,6 @@
     "observation": "FERC requires cluster studies, including a 150-day cluster study, and replaces the serial first-come process with a first-ready, first-served process.",
     "businessQuestion": "How does interconnection reform affect project readiness requirements?",
     "indicator": "Cluster-study process and readiness requirements",
-    "strength": 86,
     "confidence": "High",
     "validationStatus": "Confirmed",
     "reportNote": "Project teams need stronger site control, readiness evidence, and queue-position monitoring before committing to delivery timelines."
@@ -138,7 +133,6 @@
     "observation": "NERC reported 115 GW of announced generator retirements over the 10-year period, while also describing natural-gas-fired generators as a vital dispatchable resource.",
     "businessQuestion": "Will dispatchable power remain important as load grows and generators retire?",
     "indicator": "Generator retirement exposure and dispatchable capacity need",
-    "strength": 82,
     "confidence": "High",
     "validationStatus": "Confirmed",
     "reportNote": "Power procurement models should test reliability and emissions tradeoffs across grid power, gas-backed generation, storage, and clean-energy contracts."
@@ -162,7 +156,6 @@
     "observation": "EIA provides monthly and annual natural gas consumption data by process and region, enabling repeatable tracking of electric-power gas demand.",
     "businessQuestion": "Which public data should be monitored for gas-backed power exposure?",
     "indicator": "Natural gas consumption for electric power monitoring pathway",
-    "strength": 74,
     "confidence": "Medium",
     "validationStatus": "Partially Confirmed",
     "reportNote": "The next data pass should pull the EIA electric-power gas series directly and calculate year-over-year change."
@@ -186,7 +179,6 @@
     "observation": "NERC reported 28,275 miles of transmission above 100 kV in various stages of development for the next 10 years.",
     "businessQuestion": "Is transmission buildout a material dependency for new electric load?",
     "indicator": "Transmission development pipeline",
-    "strength": 92,
     "confidence": "High",
     "validationStatus": "Confirmed",
     "reportNote": "Market-entry timing should be evaluated against regional transmission development, not only against available land or customer demand."
@@ -210,7 +202,6 @@
     "observation": "FERC Order No. 1920 requires at least three long-term scenarios and no less than a 20-year transmission planning horizon, reassessed at least every five years.",
     "businessQuestion": "How should companies align expansion plans with grid planning cycles?",
     "indicator": "Long-term transmission planning requirement",
-    "strength": 88,
     "confidence": "High",
     "validationStatus": "Confirmed",
     "reportNote": "Expansion strategy should track the regional planning assumptions used in transmission scenarios."
@@ -234,7 +225,6 @@
     "observation": "NERC noted that studies and procurement of replacement equipment for aging HVdc components in Manitoba could take up to 10 years.",
     "businessQuestion": "Can critical electrical equipment timing become a schedule constraint?",
     "indicator": "Long-cycle equipment modernization and procurement",
-    "strength": 78,
     "confidence": "Medium",
     "validationStatus": "Confirmed",
     "reportNote": "Critical electrical equipment assumptions should be validated before approving aggressive construction or energization timelines."
@@ -258,10 +248,9 @@
     "observation": "The U.S. Drought Monitor provides weekly drought severity and coverage statistics at national, state, county, and other spatial scales.",
     "businessQuestion": "Which public dataset can quantify water-stress exposure for candidate sites?",
     "indicator": "Drought severity and coverage monitoring pathway",
-    "strength": 76,
     "confidence": "High",
     "validationStatus": "Confirmed",
-    "reportNote": "Water and cooling risk should be scored by matching candidate site geography to drought severity, water availability, and permit requirements."
+    "reportNote": "Water and cooling risk should be evaluated by matching candidate site geography to drought severity, water availability, and permit requirements."
   },
   {
     "id": "ev-012",
@@ -282,7 +271,6 @@
     "observation": "The LBNL/DOE data-center energy report includes water-use assessment alongside electricity-demand analysis, linking power and cooling constraints.",
     "businessQuestion": "Should water and cooling be considered alongside power availability?",
     "indicator": "Data-center water-use assessment",
-    "strength": 72,
     "confidence": "Medium",
     "validationStatus": "Partially Confirmed",
     "reportNote": "The next data pass should extract exact gallons/liters from the report tables and connect them to site-level drought and permit data."

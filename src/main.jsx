@@ -45,7 +45,6 @@ const signals = [
     outcome:
       'Confirmed through continued power-constrained site selection, utility load forecast revisions, and increased executive attention to energy procurement.',
     status: 'Confirmed',
-    accuracy: 'Directional signal validated',
     impact: 'Power availability became a board-level constraint for AI infrastructure timing and location strategy.',
     action:
       'Rank expansion sites by power certainty, interconnection status, and utility readiness before land or facility decisions.',
@@ -67,7 +66,6 @@ const signals = [
     outcome:
       'Confirmed as queue delays and grid upgrade requirements remained prominent in regional planning and project execution.',
     status: 'Confirmed',
-    accuracy: 'Directional signal validated',
     impact: 'Interconnection became a gating factor for construction schedules and operational launch plans.',
     action:
       'Maintain an interconnection risk register and pair each site plan with a fallback power pathway.',
@@ -89,7 +87,6 @@ const signals = [
     outcome:
       'Partially confirmed as dispatchable generation remained central to planning, though regional policy and fuel economics created uneven exposure.',
     status: 'Partially Confirmed',
-    accuracy: 'Directional signal partially validated',
     impact: 'Energy strategy required more nuance across cost, reliability, permitting, and sustainability constraints.',
     action:
       'Model procurement scenarios across grid power, direct generation, storage, and contractual clean-energy claims.',
@@ -111,7 +108,6 @@ const signals = [
     outcome:
       'Confirmed through continued transmission planning activity and investor focus on grid modernization.',
     status: 'Confirmed',
-    accuracy: 'Directional signal validated',
     impact: 'Infrastructure planning became more dependent on long-cycle grid buildout assumptions.',
     action:
       'Treat transmission project status as a core input in capacity planning, not a background market condition.',
@@ -133,7 +129,6 @@ const signals = [
     outcome:
       'Confirmed as long-lead electrical equipment stayed visible in utility, construction, and data center planning.',
     status: 'Confirmed',
-    accuracy: 'Directional signal validated',
     impact: 'Procurement timing became a strategic schedule risk rather than a back-office detail.',
     action:
       'Secure long-lead equipment assumptions before approving aggressive launch timelines.',
@@ -155,7 +150,6 @@ const signals = [
     outcome:
       'Partially confirmed as water concerns gained prominence in selected markets, while impact remained highly local.',
     status: 'Partially Confirmed',
-    accuracy: 'Directional signal partially validated',
     impact: 'Site selection needed closer integration with local resource constraints and community risk.',
     action:
       'Compare cooling designs against water availability, permitting risk, and community sensitivity by market.',
@@ -187,7 +181,6 @@ const evidenceRecords = [
       'Data centers accounted for about 4.4% of total U.S. electricity consumption in 2023.',
     businessQuestion: 'Is data-center electricity demand large enough to affect power availability and planning?',
     indicator: 'Data-center share of national electricity consumption',
-    strength: 94,
     confidence: 'High',
     validationStatus: 'Confirmed',
     reportNote:
@@ -213,7 +206,6 @@ const evidenceRecords = [
       'The LBNL/DOE report projects data centers could represent 6.7% to 12.0% of total U.S. electricity consumption by 2028.',
     businessQuestion: 'How large could the power constraint become within one planning cycle?',
     indicator: 'Projected data-center electricity share',
-    strength: 96,
     confidence: 'High',
     validationStatus: 'Confirmed',
     reportNote:
@@ -239,7 +231,6 @@ const evidenceRecords = [
       'NERC reported aggregated assessment-area summer peak demand growth of 132 GW, or about 15%, over the 10-year assessment period.',
     businessQuestion: 'Will load growth intensify interconnection and grid-readiness constraints?',
     indicator: 'Summer peak demand growth',
-    strength: 91,
     confidence: 'High',
     validationStatus: 'Confirmed',
     reportNote:
@@ -265,7 +256,6 @@ const evidenceRecords = [
       'NERC reported aggregated assessment-area winter peak demand growth of 149 GW, or almost 18%, over the 10-year assessment period.',
     businessQuestion: 'Could winter reliability become a more important operating constraint?',
     indicator: 'Winter peak demand growth',
-    strength: 90,
     confidence: 'High',
     validationStatus: 'Confirmed',
     reportNote:
@@ -291,7 +281,6 @@ const evidenceRecords = [
       'FERC requires cluster studies, including a 150-day cluster study, and replaces the serial first-come process with a first-ready, first-served process.',
     businessQuestion: 'How does interconnection reform affect project readiness requirements?',
     indicator: 'Cluster-study process and readiness requirements',
-    strength: 86,
     confidence: 'High',
     validationStatus: 'Confirmed',
     reportNote:
@@ -317,7 +306,6 @@ const evidenceRecords = [
       'NERC reported 115 GW of announced generator retirements over the 10-year period, while also describing natural-gas-fired generators as a vital dispatchable resource.',
     businessQuestion: 'Will dispatchable power remain important as load grows and generators retire?',
     indicator: 'Generator retirement exposure and dispatchable capacity need',
-    strength: 82,
     confidence: 'High',
     validationStatus: 'Confirmed',
     reportNote:
@@ -343,7 +331,6 @@ const evidenceRecords = [
       'EIA provides monthly and annual natural gas consumption data by process and region, enabling repeatable tracking of electric-power gas demand.',
     businessQuestion: 'Which public data should be monitored for gas-backed power exposure?',
     indicator: 'Natural gas consumption for electric power monitoring pathway',
-    strength: 74,
     confidence: 'Medium',
     validationStatus: 'Partially Confirmed',
     reportNote:
@@ -369,7 +356,6 @@ const evidenceRecords = [
       'NERC reported 28,275 miles of transmission above 100 kV in various stages of development for the next 10 years.',
     businessQuestion: 'Is transmission buildout a material dependency for new electric load?',
     indicator: 'Transmission development pipeline',
-    strength: 92,
     confidence: 'High',
     validationStatus: 'Confirmed',
     reportNote:
@@ -395,7 +381,6 @@ const evidenceRecords = [
       'FERC Order No. 1920 requires at least three long-term scenarios and no less than a 20-year transmission planning horizon, reassessed at least every five years.',
     businessQuestion: 'How should companies align expansion plans with grid planning cycles?',
     indicator: 'Long-term transmission planning requirement',
-    strength: 88,
     confidence: 'High',
     validationStatus: 'Confirmed',
     reportNote:
@@ -421,7 +406,6 @@ const evidenceRecords = [
       'NERC noted that studies and procurement of replacement equipment for aging HVdc components in Manitoba could take up to 10 years.',
     businessQuestion: 'Can critical electrical equipment timing become a schedule constraint?',
     indicator: 'Long-cycle equipment modernization and procurement',
-    strength: 78,
     confidence: 'Medium',
     validationStatus: 'Confirmed',
     reportNote:
@@ -447,11 +431,10 @@ const evidenceRecords = [
       'The U.S. Drought Monitor provides weekly drought severity and coverage statistics at national, state, county, and other spatial scales.',
     businessQuestion: 'Which public dataset can quantify water-stress exposure for candidate sites?',
     indicator: 'Drought severity and coverage monitoring pathway',
-    strength: 76,
     confidence: 'High',
     validationStatus: 'Confirmed',
     reportNote:
-      'Water and cooling risk should be scored by matching candidate site geography to drought severity, water availability, and permit requirements.'
+      'Water and cooling risk should be evaluated by matching candidate site geography to drought severity, water availability, and permit requirements.'
   },
   {
     id: 'ev-012',
@@ -473,7 +456,6 @@ const evidenceRecords = [
       'The LBNL/DOE data-center energy report includes water-use assessment alongside electricity-demand analysis, linking power and cooling constraints.',
     businessQuestion: 'Should water and cooling be considered alongside power availability?',
     indicator: 'Data-center water-use assessment',
-    strength: 72,
     confidence: 'Medium',
     validationStatus: 'Partially Confirmed',
     reportNote:
@@ -551,32 +533,31 @@ function calculateScorecard(items) {
   const confirmed = items.filter((item) => item.status === 'Confirmed').length;
   const partial = items.filter((item) => item.status === 'Partially Confirmed').length;
   const notConfirmed = items.filter((item) => item.status === 'Not Confirmed').length;
-  const score = items.length ? Math.round(((confirmed + partial * 0.5) / items.length) * 100) : 0;
-
   return {
     total: items.length,
     confirmed,
     partial,
-    notConfirmed,
-    score
+    notConfirmed
   };
 }
 
 function summarizeRecords(records) {
   const confirmed = records.filter((item) => item.validationStatus === 'Confirmed').length;
   const partial = records.filter((item) => item.validationStatus === 'Partially Confirmed').length;
-  const averageStrength = records.length
-    ? Math.round(records.reduce((sum, item) => sum + item.strength, 0) / records.length)
-    : 0;
   const highConfidence = records.filter((item) => item.confidence === 'High').length;
+  const numericMetrics = countNumericMetrics(records);
 
   return {
     total: records.length,
     confirmed,
     partial,
-    averageStrength,
+    numericMetrics,
     highConfidence
   };
+}
+
+function countNumericMetrics(records) {
+  return records.filter((item) => /^\d/.test(item.metricValue)).length;
 }
 
 function groupCount(records, key) {
@@ -603,7 +584,6 @@ function toCsv(records) {
     'metricUnit',
     'metricPeriod',
     'indicator',
-    'strength',
     'confidence',
     'validationStatus',
     'businessQuestion',
@@ -626,6 +606,60 @@ function downloadCsv(records) {
   URL.revokeObjectURL(url);
 }
 
+function getEvidenceRecord(id) {
+  return evidenceRecords.find((record) => record.id === id);
+}
+
+function getDataStoryCharts() {
+  return [
+    {
+      id: 'data-center-electricity-share',
+      title: 'Data center electricity share is moving into grid-planning territory',
+      subtitle: 'LBNL/DOE reported 2023 share and a 2028 projection range.',
+      unit: '% of U.S. electricity consumption',
+      max: 12,
+      sourceIds: ['ev-001', 'ev-002'],
+      points: [
+        { label: '2023 actual', value: 4.4, sourceId: 'ev-001' },
+        { label: '2028 low', value: 6.7, sourceId: 'ev-002' },
+        { label: '2028 high', value: 12.0, sourceId: 'ev-002' }
+      ],
+      decision:
+        'Power availability belongs in early site selection and capacity planning because the load category is large enough to affect utility and regional planning.'
+    },
+    {
+      id: 'nerc-peak-demand-growth',
+      title: 'Peak demand growth raises the cost of waiting',
+      subtitle: 'NERC 2024 LTRA assessment-area growth over the 2025-2034 period.',
+      unit: 'GW',
+      max: 149,
+      sourceIds: ['ev-003', 'ev-004'],
+      points: [
+        { label: 'Summer peak growth', value: 132, sourceId: 'ev-003' },
+        { label: 'Winter peak growth', value: 149, sourceId: 'ev-004' }
+      ],
+      decision:
+        'Expansion plans should test both summer and winter peak exposure, not only average annual energy availability.'
+    },
+    {
+      id: 'grid-buildout-constraints',
+      title: 'Grid delivery depends on long-cycle infrastructure',
+      subtitle: 'NERC and FERC values show why timing risk sits outside a single project team.',
+      unit: 'Source-specific unit',
+      max: 28275,
+      sourceIds: ['ev-008', 'ev-006', 'ev-005', 'ev-010'],
+      points: [
+        { label: 'Transmission in development', value: 28275, displayValue: '28,275 miles', sourceId: 'ev-008' },
+        { label: 'Announced retirements', value: 115, displayValue: '115 GW', sourceId: 'ev-006' },
+        { label: 'Cluster study period', value: 150, displayValue: '150 days', sourceId: 'ev-005' },
+        { label: 'Equipment procurement case', value: 10, displayValue: '10 years', sourceId: 'ev-010' }
+      ],
+      decision:
+        'Project schedules need separate tracking for transmission availability, generation replacement, interconnection process timing, and long-lead equipment.'
+    }
+  ];
+}
+
 function App() {
   const [activePage, setActivePage] = useState('radar');
   const [category, setCategory] = useState('All Categories');
@@ -641,6 +675,10 @@ function App() {
   }, [category, audience]);
 
   const scorecard = useMemo(() => calculateScorecard(filteredSignals), [filteredSignals]);
+  const filteredEvidenceRecords = useMemo(() => {
+    const signalIds = new Set(filteredSignals.map((signal) => signal.id));
+    return evidenceRecords.filter((record) => signalIds.has(record.signalId));
+  }, [filteredSignals]);
   const selectedSignal = filteredSignals.find((item) => item.id === selectedId) || filteredSignals[0] || null;
 
   function resetFilters() {
@@ -698,8 +736,8 @@ function App() {
                   <span>Curated signals</span>
                 </div>
                 <div>
-                  <strong>{calculateScorecard(signals).score}%</strong>
-                  <span>Directional validation</span>
+                  <strong>{evidenceRecords.length}</strong>
+                  <span>Sourced records</span>
                 </div>
                 <div>
                   <strong>0</strong>
@@ -801,7 +839,7 @@ function App() {
               <Metric icon={Layers3} label="Total signals" value={scorecard.total} />
               <Metric icon={CheckCircle2} label="Confirmed" value={scorecard.confirmed} />
               <Metric icon={ShieldCheck} label="Partially confirmed" value={scorecard.partial} />
-              <Metric icon={Gauge} label="Directional validation" value={`${scorecard.score}%`} />
+              <Metric icon={Gauge} label="Sourced records" value={filteredEvidenceRecords.length} />
             </div>
 
             <div className="signalGrid">
@@ -853,7 +891,7 @@ function App() {
               )}
             </div>
 
-            {selectedSignal && <ExecutiveBrief signal={selectedSignal} scorecard={scorecard} />}
+            {selectedSignal && <ExecutiveBrief signal={selectedSignal} />}
           </section>
 
           <section className="section frameworkSection" aria-labelledby="source-title">
@@ -967,10 +1005,10 @@ function DataLab() {
     <section className="section dataLab" aria-labelledby="data-title">
       <div className="workspaceHeader">
         <div>
-          <p className="eyebrow">Proof-of-concept evidence database</p>
+          <p className="eyebrow">Source-backed evidence database</p>
           <h2 id="data-title">Signal data and reporting lab</h2>
           <p className="dataLead">
-            A local source-backed ledger showing how public observations can be structured, filtered, scored, and reported without relying on paid APIs or live credentials.
+            A local source-backed ledger showing how public observations can be structured, filtered, interpreted, and reported without relying on paid APIs or live credentials.
           </p>
         </div>
         <div className="dataActions">
@@ -1032,8 +1070,10 @@ function DataLab() {
         <Metric icon={Table2} label="Filtered records" value={summary.total} />
         <Metric icon={CheckCircle2} label="Confirmed records" value={summary.confirmed} />
         <Metric icon={ShieldCheck} label="High confidence" value={summary.highConfidence} />
-        <Metric icon={BarChart3} label="Avg signal strength" value={`${summary.averageStrength}/100`} />
+        <Metric icon={BarChart3} label="Numeric metrics" value={summary.numericMetrics} />
       </div>
+
+      <DataStoryCharts />
 
       <div className="reportGrid">
         <ReportPanel title="Records by Category" data={byCategory} />
@@ -1044,7 +1084,7 @@ function DataLab() {
             <h3>Generated Brief</h3>
           </div>
           <p>
-            The filtered evidence set contains {summary.total} records, with {summary.confirmed} confirmed and {summary.partial} partially confirmed observations. Average signal strength is {summary.averageStrength}/100.
+            The filtered evidence set contains {summary.total} records, with {summary.confirmed} confirmed, {summary.partial} partially confirmed, and {summary.numericMetrics} records carrying numeric measured values.
           </p>
           <p>
             Current emphasis: {Object.entries(byCategory).sort((a, b) => b[1] - a[1])[0]?.[0] || 'No category selected'}.
@@ -1062,7 +1102,6 @@ function DataLab() {
                 <th>Source</th>
                 <th>Region</th>
                 <th>Metric</th>
-                <th>Strength</th>
                 <th>Status</th>
               </tr>
             </thead>
@@ -1080,7 +1119,6 @@ function DataLab() {
                   <td>
                     {record.metricValue} {record.metricUnit}
                   </td>
-                  <td>{record.strength}</td>
                   <td>
                     <span className={`statusBadge ${getStatusClass(record.validationStatus)}`}>
                       {record.validationStatus}
@@ -1143,6 +1181,61 @@ function DataLab() {
   );
 }
 
+function DataStoryCharts() {
+  const charts = getDataStoryCharts();
+
+  return (
+    <section className="dataStory" aria-labelledby="data-story-title">
+      <div className="sectionHeader compactHeader">
+        <p className="eyebrow">Real-data story</p>
+        <h2 id="data-story-title">Measured signals behind the findings</h2>
+        <p>
+          These graphs use only numeric values from sourced records in the evidence ledger. Non-numeric monitoring records are excluded from charting until exact values are extracted.
+        </p>
+      </div>
+      <div className="storyGrid">
+        {charts.map((chart) => (
+          <article className="storyChart" key={chart.id}>
+            <div className="storyChartHeader">
+              <div>
+                <h3>{chart.title}</h3>
+                <p>{chart.subtitle}</p>
+              </div>
+              <span>{chart.unit}</span>
+            </div>
+            <div className="storyBars">
+              {chart.points.map((point) => {
+                const source = getEvidenceRecord(point.sourceId);
+                const width = Math.max((point.value / chart.max) * 100, 2);
+                return (
+                  <div className="storyBarRow" key={`${chart.id}-${point.label}`}>
+                    <div className="storyBarLabel">
+                      <span>{point.label}</span>
+                      <strong>{point.displayValue || point.value}</strong>
+                    </div>
+                    <div className="storyBarTrack" aria-label={`${point.label}: ${point.displayValue || point.value}`}>
+                      <span style={{ width: `${width}%` }} />
+                    </div>
+                    {source && (
+                      <a href={source.sourceUrl} target="_blank" rel="noreferrer">
+                        {source.sourcePublisher}
+                      </a>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+            <div className="storyDecision">
+              <strong>Decision implication</strong>
+              <p>{chart.decision}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function ReportPanel({ title, data }) {
   const entries = Object.entries(data).sort((a, b) => b[1] - a[1]);
   const max = Math.max(...entries.map(([, value]) => value), 1);
@@ -1169,7 +1262,7 @@ function ReportPanel({ title, data }) {
   );
 }
 
-function ExecutiveBrief({ signal, scorecard }) {
+function ExecutiveBrief({ signal }) {
   const sourceRecords = evidenceRecords.filter((record) => record.signalId === signal.id);
 
   return (
@@ -1179,7 +1272,7 @@ function ExecutiveBrief({ signal, scorecard }) {
           <p className="eyebrow">Executive brief generator</p>
           <h2 id="brief-title">{signal.signal}</h2>
         </div>
-        <span className={`statusBadge ${getStatusClass(signal.status)}`}>{signal.accuracy}</span>
+        <span className={`statusBadge ${getStatusClass(signal.status)}`}>{signal.status}</span>
       </div>
 
       <div className="briefGrid">
@@ -1195,7 +1288,8 @@ function ExecutiveBrief({ signal, scorecard }) {
         <span>Validation window: {signal.validationWindow}</span>
         <span>Audience: {signal.audience}</span>
         <span>Source type: {signal.sourceType}</span>
-        <span>Filtered directional validation score: {scorecard.score}%</span>
+        <span>Sourced records: {sourceRecords.length}</span>
+        <span>Numeric metrics: {countNumericMetrics(sourceRecords)}</span>
       </div>
 
       <SignalDecisionFlow signal={signal} records={sourceRecords} />
@@ -1205,9 +1299,7 @@ function ExecutiveBrief({ signal, scorecard }) {
 
 function SignalDecisionFlow({ signal, records }) {
   const dateRange = records.length ? `${records[0].date} to ${records[records.length - 1].date}` : 'No records';
-  const strongestRecord = records.reduce((best, record) => {
-    return !best || record.strength > best.strength ? record : best;
-  }, null);
+  const measuredRecord = records.find((record) => /^\d/.test(record.metricValue)) || records[0] || null;
 
   const flowSteps = [
     {
@@ -1218,11 +1310,11 @@ function SignalDecisionFlow({ signal, records }) {
     },
     {
       title: 'Observed Signal',
-      meta: strongestRecord
-        ? `${strongestRecord.metricValue} ${strongestRecord.metricUnit} | ${strongestRecord.metricPeriod}`
+      meta: measuredRecord
+        ? `${measuredRecord.metricValue} ${measuredRecord.metricUnit} | ${measuredRecord.metricPeriod}`
         : 'No measured input',
-      copy: strongestRecord?.observation || signal.evidence,
-      foot: strongestRecord ? `${strongestRecord.indicator} | strength ${strongestRecord.strength}/100` : signal.sourceType
+      copy: measuredRecord?.observation || signal.evidence,
+      foot: measuredRecord ? measuredRecord.indicator : signal.sourceType
     },
     {
       title: 'Testable Expectation',
@@ -1232,7 +1324,7 @@ function SignalDecisionFlow({ signal, records }) {
     },
     {
       title: 'Validation Readout',
-      meta: signal.accuracy,
+      meta: signal.status,
       copy: signal.outcome,
       foot: `${signal.status} | ${signal.confidence} confidence`
     },

@@ -42,4 +42,6 @@ The public JSON dataset is available at:
 /data/evidence-records.json
 ```
 
+Each signal card includes a decision-flow chart showing the linked evidence inputs, strongest observed signal, testable expectation, validation readout, and recommended business action.
+
 The included records are prototype evidence records intended to demonstrate the workflow. A production version should attach dated source snapshots, analyst review notes, and source URLs or archived documents for each record.

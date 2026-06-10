@@ -1114,6 +1114,8 @@ function ReportPanel({ title, data }) {
 }
 
 function ExecutiveBrief({ signal, scorecard }) {
+  const sourceRecords = evidenceRecords.filter((record) => record.signalId === signal.id);
+
   return (
     <article className="briefPanel" aria-labelledby="brief-title">
       <div className="briefHeader">
@@ -1139,7 +1141,78 @@ function ExecutiveBrief({ signal, scorecard }) {
         <span>Source type: {signal.sourceType}</span>
         <span>Filtered directional validation score: {scorecard.score}%</span>
       </div>
+
+      <SignalDecisionFlow signal={signal} records={sourceRecords} />
     </article>
+  );
+}
+
+function SignalDecisionFlow({ signal, records }) {
+  const sourceTypes = [...new Set(records.map((record) => record.sourceType))];
+  const dateRange = records.length ? `${records[0].date} to ${records[records.length - 1].date}` : 'No records';
+  const strongestRecord = records.reduce((best, record) => {
+    return !best || record.strength > best.strength ? record : best;
+  }, null);
+
+  const flowSteps = [
+    {
+      title: 'Evidence Inputs',
+      meta: `${records.length} prototype records | ${dateRange}`,
+      copy: sourceTypes.join(', ') || 'No linked records',
+      foot: 'Stored in /data/evidence-records.json'
+    },
+    {
+      title: 'Observed Signal',
+      meta: strongestRecord ? `${strongestRecord.indicator} | strength ${strongestRecord.strength}/100` : 'No scored indicator',
+      copy: strongestRecord?.observation || signal.evidence,
+      foot: strongestRecord ? strongestRecord.region : signal.sourceType
+    },
+    {
+      title: 'Testable Expectation',
+      meta: signal.validationWindow,
+      copy: signal.expectedPattern,
+      foot: 'Expectation is directional, not a certainty claim'
+    },
+    {
+      title: 'Validation Readout',
+      meta: signal.accuracy,
+      copy: signal.outcome,
+      foot: `${signal.status} | ${signal.confidence} confidence`
+    },
+    {
+      title: 'Decision Output',
+      meta: signal.audience,
+      copy: signal.action,
+      foot: signal.impact
+    }
+  ];
+
+  return (
+    <section className="decisionFlow" aria-labelledby={`flow-${signal.id}`}>
+      <div className="flowHeader">
+        <div>
+          <p className="eyebrow">Card-specific decision flow</p>
+          <h3 id={`flow-${signal.id}`}>Where the data came from and how the decision was made</h3>
+        </div>
+        <span>{records.length} linked records</span>
+      </div>
+      <div className="flowRail">
+        {flowSteps.map((step, index) => (
+          <React.Fragment key={step.title}>
+            <div className="flowNode">
+              <span className="flowIndex">{index + 1}</span>
+              <div>
+                <h4>{step.title}</h4>
+                <strong>{step.meta}</strong>
+                <p>{step.copy}</p>
+                <small>{step.foot}</small>
+              </div>
+            </div>
+            {index < flowSteps.length - 1 && <ArrowRight className="flowConnector" size={20} aria-hidden="true" />}
+          </React.Fragment>
+        ))}
+      </div>
+    </section>
   );
 }
 

@@ -1,6 +1,6 @@
 # Signal Intelligence Lab
 
-Signal Intelligence Lab is a React/Vite portfolio prototype that demonstrates human-centered AI signal intelligence for AI infrastructure, energy, manufacturing, and operational decision support.
+Signal Intelligence Lab is a React/Vite portfolio application that demonstrates human-centered AI signal intelligence for AI infrastructure, energy, manufacturing, and operational decision support.
 
 The product emphasizes methodology over prediction: public signals are translated into testable expectations, validation windows, outcomes, and business actions using static local data.
 
@@ -19,7 +19,7 @@ npm run build
 
 The app is Vercel-ready with `vercel.json` configured for Vite.
 
-## Prototype Scope
+## Application Scope
 
 - Public signal methodology
 - One-year signal timeline
@@ -34,7 +34,7 @@ The app is Vercel-ready with `vercel.json` configured for Vite.
 
 ## Data Lab
 
-The Data Lab page uses a local demonstration ledger to show how public observations can be turned into structured signal intelligence. It includes filters for category, quarter, source type, and search terms, plus summary reports and CSV export.
+The Data Lab page uses a local source-backed evidence ledger to show how public observations can be turned into structured signal intelligence. It includes filters for category, quarter, source type, and search terms, plus summary reports and CSV export.
 
 The public JSON dataset is available at:
 
@@ -42,6 +42,6 @@ The public JSON dataset is available at:
 /data/evidence-records.json
 ```
 
-Each signal card includes a decision-flow chart showing the linked evidence inputs, strongest observed signal, testable expectation, validation readout, and recommended business action.
+Each signal card includes a decision-flow chart showing the linked evidence inputs, strongest measured signal, testable expectation, validation readout, and recommended business action.
 
-The included records are prototype evidence records intended to demonstrate the workflow. A production version should attach dated source snapshots, analyst review notes, and source URLs or archived documents for each record.
+The included records are working evidence records with source URLs, retrieval dates, metric values, units, and decision notes. Before public release, each record should receive a final analyst review against the source document and, where possible, an archived source snapshot.

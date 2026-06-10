@@ -169,291 +169,315 @@ const signals = [
 const evidenceRecords = [
   {
     id: 'ev-001',
-    date: '2025-07-18',
-    quarter: 'Q3 2025',
+    date: '2024-12-20',
+    quarter: 'Q4 2024',
     signalId: 'power-demand',
     category: 'Power Availability',
-    sourceType: 'EIA data',
-    region: 'US national',
+    sourceType: 'National lab report',
+    sourceTitle: '2024 United States Data Center Energy Usage Report',
+    sourcePublisher: 'Lawrence Berkeley National Laboratory / U.S. Department of Energy',
+    sourceUrl: 'https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report.pdf',
+    sourceDate: '2024-12-20',
+    retrievedDate: '2026-06-10',
+    region: 'United States',
+    metricValue: '4.4',
+    metricUnit: '% of U.S. electricity consumption',
+    metricPeriod: '2023',
     observation:
-      'Electricity demand narratives shifted from broad load growth to specific AI and data-center capacity pressure.',
-    businessQuestion: 'Can planned AI infrastructure be powered on the preferred timeline?',
-    indicator: 'Load growth and power availability',
-    strength: 92,
+      'Data centers accounted for about 4.4% of total U.S. electricity consumption in 2023.',
+    businessQuestion: 'Is data-center electricity demand large enough to affect power availability and planning?',
+    indicator: 'Data-center share of national electricity consumption',
+    strength: 94,
     confidence: 'High',
     validationStatus: 'Confirmed',
     reportNote:
-      'Treat energy access as a site-selection requirement rather than a procurement item.'
+      'Power availability should be treated as a strategic site-selection and operating constraint, not a late-stage procurement task.'
   },
   {
     id: 'ev-002',
-    date: '2025-08-06',
-    quarter: 'Q3 2025',
+    date: '2024-12-20',
+    quarter: 'Q4 2024',
     signalId: 'power-demand',
     category: 'Power Availability',
-    sourceType: 'Utility filing',
-    region: 'Southeast',
+    sourceType: 'National lab report',
+    sourceTitle: '2024 United States Data Center Energy Usage Report',
+    sourcePublisher: 'Lawrence Berkeley National Laboratory / U.S. Department of Energy',
+    sourceUrl: 'https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report.pdf',
+    sourceDate: '2024-12-20',
+    retrievedDate: '2026-06-10',
+    region: 'United States',
+    metricValue: '6.7-12.0',
+    metricUnit: '% of U.S. electricity consumption',
+    metricPeriod: '2028 projection range',
     observation:
-      'Utility planning language increasingly connected new large-load requests with data-center and advanced-computing demand.',
-    businessQuestion: 'Where will utility readiness constrain expansion?',
-    indicator: 'Utility load forecast revision',
-    strength: 88,
+      'The LBNL/DOE report projects data centers could represent 6.7% to 12.0% of total U.S. electricity consumption by 2028.',
+    businessQuestion: 'How large could the power constraint become within one planning cycle?',
+    indicator: 'Projected data-center electricity share',
+    strength: 96,
     confidence: 'High',
     validationStatus: 'Confirmed',
     reportNote:
-      'Compare candidate sites against utility planning posture and available substation capacity.'
+      'Scenario planning should include low, mid, and high power-availability cases rather than one base-case load assumption.'
   },
   {
     id: 'ev-003',
-    date: '2025-09-11',
-    quarter: 'Q3 2025',
+    date: '2024-12-01',
+    quarter: 'Q4 2024',
     signalId: 'interconnection',
     category: 'Grid Constraints',
-    sourceType: 'Interconnection queue',
-    region: 'PJM / Mid-Atlantic',
+    sourceType: 'Reliability assessment',
+    sourceTitle: '2024 Long-Term Reliability Assessment',
+    sourcePublisher: 'North American Electric Reliability Corporation',
+    sourceUrl: 'https://www.nerc.com/pa/RAPA/ra/Reliability%20Assessments%20DL/NERC_Long%20Term%20Reliability%20Assessment_2024.pdf',
+    sourceDate: '2024-12-01',
+    retrievedDate: '2026-06-10',
+    region: 'North America',
+    metricValue: '132',
+    metricUnit: 'GW summer peak demand growth',
+    metricPeriod: '2025-2034 assessment period',
     observation:
-      'Queue congestion and study timelines pointed to schedule risk for large-load and generation-adjacent projects.',
-    businessQuestion: 'Which projects are exposed to grid-connection delay?',
-    indicator: 'Queue volume and study timing',
-    strength: 86,
-    confidence: 'High',
-    validationStatus: 'Confirmed',
-    reportNote:
-      'Maintain a separate interconnection risk view for each site or generation partner.'
-  },
-  {
-    id: 'ev-004',
-    date: '2025-10-02',
-    quarter: 'Q4 2025',
-    signalId: 'natural-gas',
-    category: 'Generation Mix',
-    sourceType: 'EIA data',
-    region: 'US national',
-    observation:
-      'Power generation planning continued to rely on dispatchable supply as new load growth became more visible.',
-    businessQuestion: 'How should companies balance reliability, cost, and sustainability claims?',
-    indicator: 'Gas-fired generation demand',
-    strength: 74,
-    confidence: 'Medium',
-    validationStatus: 'Partially Confirmed',
-    reportNote:
-      'Model procurement scenarios instead of assuming a single clean-energy pathway.'
-  },
-  {
-    id: 'ev-005',
-    date: '2025-10-24',
-    quarter: 'Q4 2025',
-    signalId: 'interconnection',
-    category: 'Grid Constraints',
-    sourceType: 'Grid operator report',
-    region: 'ERCOT / Texas',
-    observation:
-      'Large-load planning discussions showed the need to evaluate power availability, queue position, and grid upgrade exposure together.',
-    businessQuestion: 'How much schedule risk sits outside direct company control?',
-    indicator: 'Grid planning and large-load readiness',
-    strength: 90,
-    confidence: 'High',
-    validationStatus: 'Confirmed',
-    reportNote:
-      'Pair preferred sites with fallback energy pathways before final location commitments.'
-  },
-  {
-    id: 'ev-006',
-    date: '2025-11-15',
-    quarter: 'Q4 2025',
-    signalId: 'power-demand',
-    category: 'Power Availability',
-    sourceType: 'Data center announcement',
-    region: 'Midwest',
-    observation:
-      'Announcements emphasized power-secured campuses, direct utility engagement, and energy-intensive AI workloads.',
-    businessQuestion: 'Are competitors locking up scarce powered sites?',
-    indicator: 'Power-secured site language',
-    strength: 82,
-    confidence: 'High',
-    validationStatus: 'Confirmed',
-    reportNote:
-      'Track announcement language for clues about power procurement strategy.'
-  },
-  {
-    id: 'ev-007',
-    date: '2025-12-03',
-    quarter: 'Q4 2025',
-    signalId: 'natural-gas',
-    category: 'Generation Mix',
-    sourceType: 'Earnings call',
-    region: 'US national',
-    observation:
-      'Management commentary linked AI infrastructure growth with reliability requirements and power-market complexity.',
-    businessQuestion: 'Which financial assumptions depend on stable power economics?',
-    indicator: 'Executive power-risk commentary',
-    strength: 68,
-    confidence: 'Medium',
-    validationStatus: 'Partially Confirmed',
-    reportNote:
-      'Flag power-cost sensitivity in capital plans and customer pricing models.'
-  },
-  {
-    id: 'ev-008',
-    date: '2026-01-09',
-    quarter: 'Q1 2026',
-    signalId: 'transmission',
-    category: 'Transmission',
-    sourceType: 'Transmission project',
-    region: 'Western US',
-    observation:
-      'Transmission project updates showed long-cycle grid investment becoming more relevant to market-entry timing.',
-    businessQuestion: 'Which markets need transmission progress before scale-up?',
-    indicator: 'Transmission buildout schedule',
-    strength: 84,
-    confidence: 'High',
-    validationStatus: 'Confirmed',
-    reportNote:
-      'Include transmission milestones in regional expansion readiness reviews.'
-  },
-  {
-    id: 'ev-009',
-    date: '2026-01-26',
-    quarter: 'Q1 2026',
-    signalId: 'equipment',
-    category: 'Equipment Bottlenecks',
-    sourceType: 'Equipment lead time',
-    region: 'US national',
-    observation:
-      'Transformer and switchgear lead-time references remained visible across utility and construction planning.',
-    businessQuestion: 'Will electrical equipment availability delay launch?',
-    indicator: 'Long-lead equipment pressure',
+      'NERC reported aggregated assessment-area summer peak demand growth of 132 GW, or about 15%, over the 10-year assessment period.',
+    businessQuestion: 'Will load growth intensify interconnection and grid-readiness constraints?',
+    indicator: 'Summer peak demand growth',
     strength: 91,
     confidence: 'High',
     validationStatus: 'Confirmed',
     reportNote:
-      'Validate long-lead equipment assumptions before approving aggressive delivery dates.'
+      'Expansion plans should include interconnection timing and grid-upgrade exposure as gating criteria.'
+  },
+  {
+    id: 'ev-004',
+    date: '2024-12-01',
+    quarter: 'Q4 2024',
+    signalId: 'interconnection',
+    category: 'Grid Constraints',
+    sourceType: 'Reliability assessment',
+    sourceTitle: '2024 Long-Term Reliability Assessment',
+    sourcePublisher: 'North American Electric Reliability Corporation',
+    sourceUrl: 'https://www.nerc.com/pa/RAPA/ra/Reliability%20Assessments%20DL/NERC_Long%20Term%20Reliability%20Assessment_2024.pdf',
+    sourceDate: '2024-12-01',
+    retrievedDate: '2026-06-10',
+    region: 'North America',
+    metricValue: '149',
+    metricUnit: 'GW winter peak demand growth',
+    metricPeriod: '2025-2034 assessment period',
+    observation:
+      'NERC reported aggregated assessment-area winter peak demand growth of 149 GW, or almost 18%, over the 10-year assessment period.',
+    businessQuestion: 'Could winter reliability become a more important operating constraint?',
+    indicator: 'Winter peak demand growth',
+    strength: 90,
+    confidence: 'High',
+    validationStatus: 'Confirmed',
+    reportNote:
+      'Site and power strategies should test both summer and winter peak exposure.'
+  },
+  {
+    id: 'ev-005',
+    date: '2025-01-23',
+    quarter: 'Q1 2025',
+    signalId: 'interconnection',
+    category: 'Grid Constraints',
+    sourceType: 'Regulatory rule',
+    sourceTitle: 'Explainer on the Interconnection Final Rule',
+    sourcePublisher: 'Federal Energy Regulatory Commission',
+    sourceUrl: 'https://www.ferc.gov/explainer-interconnection-final-rule',
+    sourceDate: '2025-01-23',
+    retrievedDate: '2026-06-10',
+    region: 'United States',
+    metricValue: '150',
+    metricUnit: 'days for cluster study',
+    metricPeriod: 'Order No. 2023 final rule framework',
+    observation:
+      'FERC requires cluster studies, including a 150-day cluster study, and replaces the serial first-come process with a first-ready, first-served process.',
+    businessQuestion: 'How does interconnection reform affect project readiness requirements?',
+    indicator: 'Cluster-study process and readiness requirements',
+    strength: 86,
+    confidence: 'High',
+    validationStatus: 'Confirmed',
+    reportNote:
+      'Project teams need stronger site control, readiness evidence, and queue-position monitoring before committing to delivery timelines.'
+  },
+  {
+    id: 'ev-006',
+    date: '2024-12-01',
+    quarter: 'Q4 2024',
+    signalId: 'natural-gas',
+    category: 'Generation Mix',
+    sourceType: 'Reliability assessment',
+    sourceTitle: '2024 Long-Term Reliability Assessment',
+    sourcePublisher: 'North American Electric Reliability Corporation',
+    sourceUrl: 'https://www.nerc.com/pa/RAPA/ra/Reliability%20Assessments%20DL/NERC_Long%20Term%20Reliability%20Assessment_2024.pdf',
+    sourceDate: '2024-12-01',
+    retrievedDate: '2026-06-10',
+    region: 'North America',
+    metricValue: '115',
+    metricUnit: 'GW announced generator retirements',
+    metricPeriod: '2025-2034 assessment period',
+    observation:
+      'NERC reported 115 GW of announced generator retirements over the 10-year period, while also describing natural-gas-fired generators as a vital dispatchable resource.',
+    businessQuestion: 'Will dispatchable power remain important as load grows and generators retire?',
+    indicator: 'Generator retirement exposure and dispatchable capacity need',
+    strength: 82,
+    confidence: 'High',
+    validationStatus: 'Confirmed',
+    reportNote:
+      'Power procurement models should test reliability and emissions tradeoffs across grid power, gas-backed generation, storage, and clean-energy contracts.'
+  },
+  {
+    id: 'ev-007',
+    date: '2026-06-10',
+    quarter: 'Q2 2026',
+    signalId: 'natural-gas',
+    category: 'Generation Mix',
+    sourceType: 'Open data catalog',
+    sourceTitle: 'EIA Open Data: Natural gas consumption/end use',
+    sourcePublisher: 'U.S. Energy Information Administration',
+    sourceUrl: 'https://www.eia.gov/opendata/',
+    sourceDate: '2026-06-10',
+    retrievedDate: '2026-06-10',
+    region: 'United States',
+    metricValue: 'monthly and annual',
+    metricUnit: 'natural gas consumed by product, process, and region',
+    metricPeriod: 'EIA API dataset',
+    observation:
+      'EIA provides monthly and annual natural gas consumption data by process and region, enabling repeatable tracking of electric-power gas demand.',
+    businessQuestion: 'Which public data should be monitored for gas-backed power exposure?',
+    indicator: 'Natural gas consumption for electric power monitoring pathway',
+    strength: 74,
+    confidence: 'Medium',
+    validationStatus: 'Partially Confirmed',
+    reportNote:
+      'The next data pass should pull the EIA electric-power gas series directly and calculate year-over-year change.'
+  },
+  {
+    id: 'ev-008',
+    date: '2024-12-01',
+    quarter: 'Q4 2024',
+    signalId: 'transmission',
+    category: 'Transmission',
+    sourceType: 'Reliability assessment',
+    sourceTitle: '2024 Long-Term Reliability Assessment',
+    sourcePublisher: 'North American Electric Reliability Corporation',
+    sourceUrl: 'https://www.nerc.com/pa/RAPA/ra/Reliability%20Assessments%20DL/NERC_Long%20Term%20Reliability%20Assessment_2024.pdf',
+    sourceDate: '2024-12-01',
+    retrievedDate: '2026-06-10',
+    region: 'North America',
+    metricValue: '28,275',
+    metricUnit: 'miles of transmission >100 kV in development',
+    metricPeriod: '2025-2034 assessment period',
+    observation:
+      'NERC reported 28,275 miles of transmission above 100 kV in various stages of development for the next 10 years.',
+    businessQuestion: 'Is transmission buildout a material dependency for new electric load?',
+    indicator: 'Transmission development pipeline',
+    strength: 92,
+    confidence: 'High',
+    validationStatus: 'Confirmed',
+    reportNote:
+      'Market-entry timing should be evaluated against regional transmission development, not only against available land or customer demand.'
+  },
+  {
+    id: 'ev-009',
+    date: '2026-06-10',
+    quarter: 'Q2 2026',
+    signalId: 'transmission',
+    category: 'Transmission',
+    sourceType: 'Regulatory rule',
+    sourceTitle: 'Explainer on the Transmission Planning and Cost Allocation Final Rule',
+    sourcePublisher: 'Federal Energy Regulatory Commission',
+    sourceUrl: 'https://www.ferc.gov/explainer-transmission-planning-and-cost-allocation-final-rule',
+    sourceDate: '2026-06-10',
+    retrievedDate: '2026-06-10',
+    region: 'United States',
+    metricValue: '20',
+    metricUnit: 'year transmission planning horizon',
+    metricPeriod: 'Order No. 1920 long-term planning framework',
+    observation:
+      'FERC Order No. 1920 requires at least three long-term scenarios and no less than a 20-year transmission planning horizon, reassessed at least every five years.',
+    businessQuestion: 'How should companies align expansion plans with grid planning cycles?',
+    indicator: 'Long-term transmission planning requirement',
+    strength: 88,
+    confidence: 'High',
+    validationStatus: 'Confirmed',
+    reportNote:
+      'Expansion strategy should track the regional planning assumptions used in transmission scenarios.'
   },
   {
     id: 'ev-010',
-    date: '2026-02-13',
-    quarter: 'Q1 2026',
+    date: '2024-12-01',
+    quarter: 'Q4 2024',
     signalId: 'equipment',
     category: 'Equipment Bottlenecks',
-    sourceType: 'Job postings',
-    region: 'Southeast',
+    sourceType: 'Reliability assessment',
+    sourceTitle: '2024 Long-Term Reliability Assessment',
+    sourcePublisher: 'North American Electric Reliability Corporation',
+    sourceUrl: 'https://www.nerc.com/pa/RAPA/ra/Reliability%20Assessments%20DL/NERC_Long%20Term%20Reliability%20Assessment_2024.pdf',
+    sourceDate: '2024-12-01',
+    retrievedDate: '2026-06-10',
+    region: 'Manitoba / North America',
+    metricValue: '10',
+    metricUnit: 'years for studies/procurement of replacement equipment',
+    metricPeriod: '2024 LTRA regional assessment',
     observation:
-      'Hiring demand for electrical, substation, and power-systems roles suggested operational strain around grid and facility delivery.',
-    businessQuestion: 'Where could workforce shortages become schedule risk?',
-    indicator: 'Power-systems hiring demand',
-    strength: 77,
+      'NERC noted that studies and procurement of replacement equipment for aging HVdc components in Manitoba could take up to 10 years.',
+    businessQuestion: 'Can critical electrical equipment timing become a schedule constraint?',
+    indicator: 'Long-cycle equipment modernization and procurement',
+    strength: 78,
     confidence: 'Medium',
     validationStatus: 'Confirmed',
     reportNote:
-      'Monitor specialized hiring patterns as an early capacity signal.'
+      'Critical electrical equipment assumptions should be validated before approving aggressive construction or energization timelines.'
   },
   {
     id: 'ev-011',
-    date: '2026-02-27',
-    quarter: 'Q1 2026',
-    signalId: 'transmission',
-    category: 'Transmission',
-    sourceType: 'Regulatory update',
-    region: 'Mid-Atlantic',
-    observation:
-      'Regulatory activity kept transmission cost allocation and grid modernization in the foreground.',
-    businessQuestion: 'How will grid investment affect total expansion cost?',
-    indicator: 'Regulatory transmission activity',
-    strength: 80,
-    confidence: 'High',
-    validationStatus: 'Confirmed',
-    reportNote:
-      'Treat transmission policy as a cost and timing input for regional strategy.'
-  },
-  {
-    id: 'ev-012',
-    date: '2026-03-19',
-    quarter: 'Q1 2026',
-    signalId: 'equipment',
-    category: 'Equipment Bottlenecks',
-    sourceType: 'Earnings call',
-    region: 'US national',
-    observation:
-      'Supplier and infrastructure commentary reinforced that electrical equipment availability remained a limiting factor.',
-    businessQuestion: 'Which procurement decisions need to move earlier?',
-    indicator: 'Supplier capacity commentary',
-    strength: 87,
-    confidence: 'High',
-    validationStatus: 'Confirmed',
-    reportNote:
-      'Move critical electrical procurement into the earliest planning stage.'
-  },
-  {
-    id: 'ev-013',
-    date: '2026-04-04',
+    date: '2026-06-10',
     quarter: 'Q2 2026',
     signalId: 'water-cooling',
     category: 'Permitting and Water',
-    sourceType: 'Permit',
-    region: 'Southwest',
+    sourceType: 'Public data catalog',
+    sourceTitle: 'U.S. Drought Monitor Data Download',
+    sourcePublisher: 'National Drought Mitigation Center / USDA / NOAA / NASA',
+    sourceUrl: 'https://droughtmonitor.unl.edu/DmData/DataDownload.aspx',
+    sourceDate: '2026-06-10',
+    retrievedDate: '2026-06-10',
+    region: 'United States',
+    metricValue: 'weekly',
+    metricUnit: 'drought severity and coverage statistics',
+    metricPeriod: 'U.S. Drought Monitor dataset',
     observation:
-      'Local permit and resource discussions connected data-center growth with water availability and cooling design scrutiny.',
-    businessQuestion: 'Could local resource constraints affect approval or community acceptance?',
-    indicator: 'Water and cooling permit sensitivity',
+      'The U.S. Drought Monitor provides weekly drought severity and coverage statistics at national, state, county, and other spatial scales.',
+    businessQuestion: 'Which public dataset can quantify water-stress exposure for candidate sites?',
+    indicator: 'Drought severity and coverage monitoring pathway',
+    strength: 76,
+    confidence: 'High',
+    validationStatus: 'Confirmed',
+    reportNote:
+      'Water and cooling risk should be scored by matching candidate site geography to drought severity, water availability, and permit requirements.'
+  },
+  {
+    id: 'ev-012',
+    date: '2024-12-20',
+    quarter: 'Q4 2024',
+    signalId: 'water-cooling',
+    category: 'Permitting and Water',
+    sourceType: 'National lab report',
+    sourceTitle: '2024 United States Data Center Energy Usage Report',
+    sourcePublisher: 'Lawrence Berkeley National Laboratory / U.S. Department of Energy',
+    sourceUrl: 'https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report.pdf',
+    sourceDate: '2024-12-20',
+    retrievedDate: '2026-06-10',
+    region: 'United States',
+    metricValue: 'water demand included',
+    metricUnit: 'data-center water-use assessment',
+    metricPeriod: '2023 baseline and 2028 projection framework',
+    observation:
+      'The LBNL/DOE data-center energy report includes water-use assessment alongside electricity-demand analysis, linking power and cooling constraints.',
+    businessQuestion: 'Should water and cooling be considered alongside power availability?',
+    indicator: 'Data-center water-use assessment',
     strength: 72,
     confidence: 'Medium',
     validationStatus: 'Partially Confirmed',
     reportNote:
-      'Evaluate water profile and cooling design before public project announcements.'
-  },
-  {
-    id: 'ev-014',
-    date: '2026-04-22',
-    quarter: 'Q2 2026',
-    signalId: 'water-cooling',
-    category: 'Permitting and Water',
-    sourceType: 'Water constraint',
-    region: 'Western US',
-    observation:
-      'Regional water stress made cooling strategy a more visible operating and reputational variable.',
-    businessQuestion: 'Which site plans need lower-water cooling options?',
-    indicator: 'Water-resource constraint',
-    strength: 70,
-    confidence: 'Medium',
-    validationStatus: 'Partially Confirmed',
-    reportNote:
-      'Compare cooling technology, local water availability, and community risk by market.'
-  },
-  {
-    id: 'ev-015',
-    date: '2026-05-07',
-    quarter: 'Q2 2026',
-    signalId: 'interconnection',
-    category: 'Grid Constraints',
-    sourceType: 'Utility commission filing',
-    region: 'Midwest',
-    observation:
-      'Proceedings continued to surface questions about who pays for grid upgrades tied to large new loads.',
-    businessQuestion: 'Could grid-upgrade costs shift project economics?',
-    indicator: 'Large-load cost allocation',
-    strength: 83,
-    confidence: 'High',
-    validationStatus: 'Confirmed',
-    reportNote:
-      'Include cost-allocation exposure in site and customer contract review.'
-  },
-  {
-    id: 'ev-016',
-    date: '2026-05-28',
-    quarter: 'Q2 2026',
-    signalId: 'transmission',
-    category: 'Transmission',
-    sourceType: 'Grid operator report',
-    region: 'US regional markets',
-    observation:
-      'Regional planning continued to show transmission buildout as a long-cycle dependency for new electric load.',
-    businessQuestion: 'Which markets can support near-term load without major upgrades?',
-    indicator: 'Regional transmission readiness',
-    strength: 85,
-    confidence: 'High',
-    validationStatus: 'Confirmed',
-    reportNote:
-      'Use regional grid readiness as a timing filter for capital deployment.'
+      'The next data pass should extract exact gallons/liters from the report tables and connect them to site-level drought and permit data.'
   }
 ];
 
@@ -569,7 +593,15 @@ function toCsv(records) {
     'quarter',
     'category',
     'sourceType',
+    'sourceTitle',
+    'sourcePublisher',
+    'sourceUrl',
+    'sourceDate',
+    'retrievedDate',
     'region',
+    'metricValue',
+    'metricUnit',
+    'metricPeriod',
     'indicator',
     'strength',
     'confidence',
@@ -704,7 +736,7 @@ function App() {
               <p className="eyebrow">Methodology over prediction</p>
               <h2 id="methodology-title">From public signal to business action</h2>
               <p>
-                This prototype identifies signals, formulates testable expectations, validates outcomes, and turns the result into decision-ready guidance.
+                This workflow identifies signals, formulates testable expectations, validates outcomes, and turns the result into decision-ready guidance.
               </p>
             </div>
             <div className="methodologyFlow">
@@ -861,7 +893,7 @@ function App() {
       )}
 
       <footer>
-        <span>Built as a human-centered AI systems prototype by Suzy Thompson.</span>
+        <span>Built as a human-centered AI systems product by Suzy Thompson.</span>
         <span>Static local data only. No paid APIs. No forecasting guarantees.</span>
       </footer>
     </main>
@@ -904,6 +936,11 @@ function DataLab() {
         record.indicator,
         record.region,
         record.reportNote,
+        record.sourceTitle,
+        record.sourcePublisher,
+        record.metricValue,
+        record.metricUnit,
+        record.metricPeriod,
         signalNameById[record.signalId]
       ]
         .join(' ')
@@ -933,7 +970,7 @@ function DataLab() {
           <p className="eyebrow">Proof-of-concept evidence database</p>
           <h2 id="data-title">Signal data and reporting lab</h2>
           <p className="dataLead">
-            A local demonstration ledger showing how public observations can be structured, filtered, scored, and reported without relying on paid APIs or live credentials.
+            A local source-backed ledger showing how public observations can be structured, filtered, scored, and reported without relying on paid APIs or live credentials.
           </p>
         </div>
         <div className="dataActions">
@@ -951,7 +988,7 @@ function DataLab() {
       <div className="noticePanel">
         <FileText size={20} aria-hidden="true" />
         <p>
-          This dataset is a transparent prototype built from the project methodology. It is also available at /data/evidence-records.json for readers who want to inspect or reuse the records outside the interface.
+          This dataset is a source-backed working evidence base. Each record includes a publisher, source URL, retrieval date, metric, unit, period, and the decision logic used to connect the measured signal to a business action.
         </p>
       </div>
 
@@ -1024,6 +1061,7 @@ function DataLab() {
                 <th>Signal</th>
                 <th>Source</th>
                 <th>Region</th>
+                <th>Metric</th>
                 <th>Strength</th>
                 <th>Status</th>
               </tr>
@@ -1037,8 +1075,11 @@ function DataLab() {
                 >
                   <td>{record.date}</td>
                   <td>{signalNameById[record.signalId]}</td>
-                  <td>{record.sourceType}</td>
+                  <td>{record.sourceTitle || record.sourceType}</td>
                   <td>{record.region}</td>
+                  <td>
+                    {record.metricValue} {record.metricUnit}
+                  </td>
                   <td>{record.strength}</td>
                   <td>
                     <span className={`statusBadge ${getStatusClass(record.validationStatus)}`}>
@@ -1071,6 +1112,21 @@ function DataLab() {
             <div>
               <dt>Observation</dt>
               <dd>{selectedRecord.observation}</dd>
+            </div>
+            <div>
+              <dt>Measured input</dt>
+              <dd>
+                {selectedRecord.metricValue} {selectedRecord.metricUnit} ({selectedRecord.metricPeriod})
+              </dd>
+            </div>
+            <div>
+              <dt>Source</dt>
+              <dd>
+                <a href={selectedRecord.sourceUrl} target="_blank" rel="noreferrer">
+                  {selectedRecord.sourceTitle}
+                </a>
+                <span>{selectedRecord.sourcePublisher}</span>
+              </dd>
             </div>
             <div>
               <dt>Business question</dt>
@@ -1148,7 +1204,6 @@ function ExecutiveBrief({ signal, scorecard }) {
 }
 
 function SignalDecisionFlow({ signal, records }) {
-  const sourceTypes = [...new Set(records.map((record) => record.sourceType))];
   const dateRange = records.length ? `${records[0].date} to ${records[records.length - 1].date}` : 'No records';
   const strongestRecord = records.reduce((best, record) => {
     return !best || record.strength > best.strength ? record : best;
@@ -1157,15 +1212,17 @@ function SignalDecisionFlow({ signal, records }) {
   const flowSteps = [
     {
       title: 'Evidence Inputs',
-      meta: `${records.length} prototype records | ${dateRange}`,
-      copy: sourceTypes.join(', ') || 'No linked records',
+      meta: `${records.length} sourced records | ${dateRange}`,
+      copy: records.map((record) => record.sourceTitle || record.sourceType).join('; ') || 'No linked records',
       foot: 'Stored in /data/evidence-records.json'
     },
     {
       title: 'Observed Signal',
-      meta: strongestRecord ? `${strongestRecord.indicator} | strength ${strongestRecord.strength}/100` : 'No scored indicator',
+      meta: strongestRecord
+        ? `${strongestRecord.metricValue} ${strongestRecord.metricUnit} | ${strongestRecord.metricPeriod}`
+        : 'No measured input',
       copy: strongestRecord?.observation || signal.evidence,
-      foot: strongestRecord ? strongestRecord.region : signal.sourceType
+      foot: strongestRecord ? `${strongestRecord.indicator} | strength ${strongestRecord.strength}/100` : signal.sourceType
     },
     {
       title: 'Testable Expectation',

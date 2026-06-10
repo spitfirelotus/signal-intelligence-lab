@@ -633,7 +633,7 @@ main {
 
 table {
   width: 100%;
-  min-width: 820px;
+  min-width: 980px;
   border-collapse: collapse;
 }
 
@@ -689,6 +689,21 @@ tbody tr:hover,
   margin: 5px 0 0;
   color: var(--ink-soft);
   line-height: 1.55;
+}
+
+.recordDetail a {
+  color: var(--burgundy);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.recordDetail a:hover {
+  text-decoration: underline;
+}
+
+.recordDetail dd span {
+  display: block;
+  margin-top: 4px;
 }
 
 .scorecardGrid {

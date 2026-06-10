@@ -645,7 +645,10 @@ function App() {
               </button>
             </div>
             <div className="topbarPills">
-              <span>Local Data</span>
+              <button type="button" onClick={() => setActivePage('data')}>
+                <Database size={15} aria-hidden="true" />
+                Open Data Lab
+              </button>
               <span>Vercel Ready</span>
             </div>
           </nav>
@@ -948,7 +951,7 @@ function DataLab() {
       <div className="noticePanel">
         <FileText size={20} aria-hidden="true" />
         <p>
-          This dataset is a transparent prototype built from the project methodology. It is designed to show how evidence would be captured and reported; production use should attach dated source snapshots and review notes to each record.
+          This dataset is a transparent prototype built from the project methodology. It is also available at /data/evidence-records.json for readers who want to inspect or reuse the records outside the interface.
         </p>
       </div>
 

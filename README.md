@@ -36,4 +36,10 @@ The app is Vercel-ready with `vercel.json` configured for Vite.
 
 The Data Lab page uses a local demonstration ledger to show how public observations can be turned into structured signal intelligence. It includes filters for category, quarter, source type, and search terms, plus summary reports and CSV export.
 
+The public JSON dataset is available at:
+
+```text
+/data/evidence-records.json
+```
+
 The included records are prototype evidence records intended to demonstrate the workflow. A production version should attach dated source snapshots, analyst review notes, and source URLs or archived documents for each record.

@@ -121,6 +121,7 @@ main {
 }
 
 .topbarPills span,
+.topbarPills button,
 .heroActions div {
   border: 1px solid rgba(250, 248, 245, 0.28);
   background: rgba(250, 248, 245, 0.09);
@@ -128,6 +129,13 @@ main {
   padding: 8px 12px;
   color: rgba(250, 248, 245, 0.86);
   font-size: 0.82rem;
+}
+
+.topbarPills button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
 }
 
 .heroGrid {

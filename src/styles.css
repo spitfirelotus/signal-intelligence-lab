@@ -32,7 +32,8 @@ body {
 }
 
 button,
-select {
+select,
+input {
   font: inherit;
 }
 
@@ -67,6 +68,7 @@ main {
 }
 
 .brandMark,
+.navCluster,
 .topbarPills,
 .heroActions,
 .cardTopline,
@@ -79,6 +81,38 @@ main {
 .brandMark {
   gap: 10px;
   font-weight: 750;
+}
+
+.navCluster {
+  gap: 8px;
+  padding: 5px;
+  border: 1px solid rgba(250, 248, 245, 0.2);
+  background: rgba(250, 248, 245, 0.08);
+  border-radius: 8px;
+}
+
+.navCluster button,
+.dataActions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 36px;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.navCluster button {
+  padding: 0 12px;
+  color: rgba(250, 248, 245, 0.76);
+  background: transparent;
+}
+
+.navCluster button.active,
+.navCluster button:hover {
+  color: var(--plum);
+  background: var(--warm-white);
 }
 
 .topbarPills {
@@ -407,6 +441,248 @@ main {
   cursor: pointer;
 }
 
+.dataLab {
+  width: min(1260px, calc(100% - 40px));
+}
+
+.dataLead {
+  max-width: 720px;
+  margin: 14px 0 0;
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+
+.dataActions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.dataActions button {
+  padding: 0 13px;
+  color: var(--warm-white);
+  background: var(--plum);
+}
+
+.dataActions button:first-child {
+  background: var(--burgundy);
+}
+
+.noticePanel {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  margin-bottom: 18px;
+  color: #4e3b23;
+  background: rgba(193, 133, 61, 0.14);
+  border: 1px solid rgba(193, 133, 61, 0.28);
+  border-radius: 8px;
+}
+
+.noticePanel svg {
+  color: var(--amber);
+  flex: none;
+}
+
+.noticePanel p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.dataFilterGrid {
+  display: grid;
+  grid-template-columns: minmax(280px, 1.5fr) repeat(3, minmax(180px, 1fr));
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.dataFilterGrid label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 48px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--warm-white);
+}
+
+.dataFilterGrid svg {
+  color: var(--burgundy);
+  flex: none;
+}
+
+.dataFilterGrid select,
+.dataFilterGrid input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--charcoal);
+}
+
+.dataScorecard {
+  margin-bottom: 18px;
+}
+
+.reportGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.reportPanel,
+.recordDetail,
+.tableShell {
+  background: var(--warm-white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 12px 36px rgba(43, 47, 54, 0.08);
+}
+
+.reportPanel {
+  padding: 18px;
+  min-height: 230px;
+}
+
+.reportPanel p {
+  color: var(--ink-soft);
+  line-height: 1.55;
+  margin: 10px 0 0;
+}
+
+.reportTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--burgundy);
+  margin-bottom: 14px;
+}
+
+.reportTitle h3 {
+  margin: 0;
+  color: var(--charcoal);
+  font-size: 1rem;
+}
+
+.barList {
+  display: grid;
+  gap: 13px;
+}
+
+.barRow {
+  display: grid;
+  gap: 6px;
+}
+
+.barRow div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
+.barRow strong {
+  color: var(--charcoal);
+}
+
+.barRow progress {
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 999px;
+  background: var(--cream);
+}
+
+.barRow progress::-webkit-progress-bar {
+  background: var(--cream);
+}
+
+.barRow progress::-webkit-progress-value {
+  background: linear-gradient(90deg, var(--burgundy), var(--mauve));
+}
+
+.barRow progress::-moz-progress-bar {
+  background: linear-gradient(90deg, var(--burgundy), var(--mauve));
+}
+
+.databaseLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.tableShell {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 820px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  color: var(--ink-soft);
+  background: #fffdf9;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+td {
+  color: var(--charcoal);
+  font-size: 0.88rem;
+}
+
+tbody tr {
+  cursor: pointer;
+}
+
+tbody tr:hover,
+.selectedRow {
+  background: rgba(154, 107, 143, 0.1);
+}
+
+.recordDetail {
+  padding: 18px;
+  position: sticky;
+  top: 16px;
+}
+
+.recordDetail dl {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+}
+
+.recordDetail dt {
+  color: var(--burgundy);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.recordDetail dd {
+  margin: 5px 0 0;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
 .scorecardGrid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   margin-bottom: 18px;
@@ -673,7 +949,8 @@ footer {
 
   .heroGrid,
   .workspaceHeader,
-  .outlookPanel {
+  .outlookPanel,
+  .databaseLayout {
     grid-template-columns: 1fr;
   }
 
@@ -692,13 +969,22 @@ footer {
 
   .timelineGrid,
   .scorecardGrid,
-  .sourceGrid {
+  .sourceGrid,
+  .reportGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .signalGrid,
   .briefGrid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .dataFilterGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .recordDetail {
+    position: static;
   }
 }
 
@@ -717,8 +1003,15 @@ footer {
     flex-direction: column;
   }
 
-  .topbarPills {
-    display: none;
+  .navCluster,
+  .topbarPills,
+  .dataActions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .navCluster button {
+    flex: 1;
   }
 
   .heroGrid {
@@ -742,7 +1035,9 @@ footer {
   .signalGrid,
   .briefGrid,
   .sourceGrid,
-  .outlookGrid {
+  .outlookGrid,
+  .reportGrid,
+  .dataFilterGrid {
     grid-template-columns: 1fr;
   }
 
